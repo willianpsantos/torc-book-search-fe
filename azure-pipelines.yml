@@ -24,8 +24,7 @@ steps:
 - task: KubernetesManifest@1
   inputs:
     action: 'deploy'
-    connectionType: 'azureResourceManager'
-    azureSubscriptionConnection: 'Azure subscription 1(42f2390a-57c8-4187-8d8f-bc7d2e0fcd87)'
-    azureResourceGroup: 'torc-bs-resources'
-    kubernetesCluster: 'torc-bs-cluster'
+    connectionType: 'kubernetesServiceConnection'
+    kubernetesServiceConnection: 'torc-bs-cluster-torc-book-search-ns'
     namespace: 'torc-book-search-ns'
+    manifests: 'manifests'
